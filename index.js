@@ -30,6 +30,9 @@ function BankForm() {
 
   $form.addEventListener("submit", (e) => {
     e.preventDefault();
+    if (document.querySelector("input[name='bank']").value === "") {
+      return;
+    }
     const value = document.querySelector("input[name='bank']").value;
     addNumber(Number(value));
   });
